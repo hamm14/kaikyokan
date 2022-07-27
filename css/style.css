@@ -1,0 +1,1000 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+h1 {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 40px;
+  display: inline;
+}
+main {
+  background: url(../img/back-main.png) no-repeat center 400px / cover;
+  overflow: hidden;
+}
+.wrap {
+  padding: 80px 0;
+  text-align: center;
+}
+.flex {
+  display: flex;
+}
+.a-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  position: relative;
+  top: 0;
+  left: 350px;
+}
+.a-link:hover {
+  color: lightslategray;
+}
+.news .flex > a:hover {
+  color: #CCFFFF;
+}
+.a-link::after{
+  content: "➡";
+}
+
+
+/*header*/
+header {
+  background: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 5px #505050;
+  position: fixed;
+  z-index: 4;
+  min-height: 80px;
+}
+.g_nav_wrap {
+  width: 800px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.g_nav {
+  height: 70px;
+  text-align: center;
+}
+.g_nav a {
+  font-weight: bold;
+  margin: 0 45px;
+  display: block;
+  letter-spacing: 1px;
+}
+.header-center {
+  position: relative;
+  top: 0;
+  left: 21%;
+  width: auto;
+}
+.header-center img {
+  height: 85px;
+  margin-top:10px;
+}
+.header-left {
+  position: relative;
+  right: 110px;
+}
+.header-right {
+  margin-left: 80px;
+}
+.color1 {
+  background: url(../img/ticket.png) no-repeat center -5px / 75px;
+}
+.color2 {
+  background: url(../img/news.png) no-repeat center -5px / 75px;
+}
+.color3 {
+  background: url(../img/floor.png) no-repeat center -5px / 75px;
+}
+.color4 {
+  background: url(../img/access.png) no-repeat center -5px / 75px;
+}
+.color1 a {
+  color: #F8759D;
+  padding-top: 50px;
+}
+.color2 a {
+  color: #FDA64A;
+  padding-top: 50px;
+}
+.color3 a {
+  color: #FBD000;
+  padding-top: 50px;
+}
+.color4 a {
+  color: #8CC919;
+  padding-top: 50px;
+}
+
+/*mainvisual*/
+.mainvisual {
+  height: 100vh;
+}
+.mainvisual .main-img {
+  height: 100vh;
+}
+.mainvisual img {
+  width: 100%;
+  opacity: 0.8;
+}
+.contact {
+  letter-spacing: 1px;
+  position: fixed;
+  top: 150px;
+  right: 0;
+  width: 80px;
+  height: 160px;
+  opacity: 0.9;
+  z-index: 3;
+}
+.contact::before {
+  content: "";
+  background: #CCFFFF;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: -80px;
+}
+.contact h2 {
+  writing-mode: vertical-rl;
+  font-size: 1.15rem;
+  color: #505050;
+  position: absolute;
+  top: 22.5px;
+  right: 20px;
+}
+.kurage-main {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  text-align: left;
+  z-index: 3;
+  animation: fuwa linear 3s infinite both;
+}
+.hitode-main {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  z-index: 3;
+  animation: fuwa ease-in-out 3s infinite both;
+}
+@keyframes fuwa {
+  0% {
+    transform: translate(0, 0);
+  }
+  35% {
+    transform: translate(0, -7px);
+  }
+  55% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, 7px);
+  }
+}
+@-webkit-keyframes fuwa {
+  0% {
+    transform: translate(0, 0);
+  }
+  35% {
+    transform: translate(0, -7px);
+  }
+  55% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, 7px);
+  }
+}
+@-moz-keyframes fuwa {
+  0% {
+    transform: translate(0, 0);
+  }
+  35% {
+    transform: translate(0, -7px);
+  }
+  55% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, 7px);
+  }
+}
+.kurage-main img,
+.hitode-main img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  opacity: 1;
+}
+.main-logo {
+  position: relative;
+  width: 20%;
+  bottom: 260px;
+  left: 39%;
+}
+.main-logo img {
+  width: 110%;
+  height: auto;
+  opacity: 1;
+}
+
+/*corona*/
+.corona {
+  background: #FF4A4A;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 40px;
+  letter-spacing: 1px;
+}
+.corona p {
+  line-height: 20px;
+  font-size: 20px;
+}
+.corona h2 {
+  margin: 15px 0;
+}
+.corona a {
+ text-decoration: underline; 
+}
+
+
+/*営業時間*/
+.shop-open {
+  color: #505050;
+}
+.shop-open h1::before,
+.shop-open h1::after {
+  content: "";
+  display: inline-block;
+  background: url(../img/pengin-bla.png) center center / contain no-repeat;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 20px;
+  position: relative;
+  top: 15px;
+  left: 0;
+}
+.shop-open p,
+.shop .text p {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin: 50px auto 10px auto;
+}
+.shop-open .flex {
+  justify-content: center;
+}
+.shop-open .flex small {
+  margin-right: 20px;
+  letter-spacing: 1.2px;
+}
+
+/*ticket*/
+.ticket {
+  justify-content: center;
+}
+.ticket a,
+.ticket img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+
+
+/*お知らせ*/
+.news {
+  padding-bottom: 30px;
+}
+.news .flex {
+  width: 60%;
+  margin: 100px auto 20px;
+  flex-wrap: wrap;
+  text-align: left;
+  font-size: 1.3rem;
+}
+.news dl a {
+  display:  flex;
+  width: 100%;
+  margin: 20px 0;
+}
+.new dl a:hover {
+  opacity: 0.8;
+}
+.news dt, .news dd {
+  display: block;
+  border-bottom: 5px dotted rgb(223, 223, 223,.7);
+  padding-bottom: 5px;
+}
+.news dt {
+  width: 20%;
+  text-align: center;
+}
+.news dd {
+  width: 70%;
+}
+
+
+
+
+/*当館について*/
+.kurage-backimg {
+  background: url(../img/kurage-back.png) no-repeat center / cover fixed;
+  height: 125vh;
+  position: relative;
+}
+.kani-back-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 75%;
+  width: 100%;
+}
+.kani-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.shop .text p {
+  width: 50%;
+  text-align: left;
+  letter-spacing: 1.3px;
+  line-height: 2rem;
+}
+.text {
+  padding: 60px 0 0 20px;
+  background: #33ccff;
+  position: relative;
+  z-index: 1;
+  height: 25%;
+}
+.animation {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  justify-content: space-between;
+  
+}
+.animation img {
+  transform-origin:top;
+  animation:furiko ease-in-out 3s infinite alternate;
+}
+.animation img:last-child {
+  transform-origin:top;
+  animation:furiko ease-in-out 3s infinite alternate-reverse;
+}
+
+@keyframes furiko {
+  0% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+.animation img { 
+  width: 20%;
+}
+.animation img:first-child
+
+
+/*ebent*/
+.event-space {
+  margin: 0 auto;
+  padding-top: 160px;
+  min-width: 1000px;
+}
+.event-space .flex {
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0;
+  letter-spacing: 1px;
+  line-height: 40px;
+}
+.event-space h2 {
+  font-size: 1.3rem;
+}
+.event-space .flex a {
+  display: inline-block;
+  height: 150px;
+}
+.special-event li h2 {
+  margin-top: 80px;
+}
+.nomal-event li h2 {
+  margin-top: 70px;
+}
+.event-list .img {
+  position: relative;
+  z-index: -1;
+}
+.event-list .img img{
+  width: 50%;
+}
+.event-space li {
+  margin: 0 30px;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.back-pink {
+  background: #F8759D;
+}
+.back-pink a::before {
+  content: "";
+  background: url(../img/karei.png) no-repeat -40px 150px / 50% ;
+}
+.back-pink .img {
+  bottom: 150px;
+  left: -40px;
+}
+.back-orange {
+  background: #FDA64A;
+}
+.back-orange .img {
+  bottom: 50px;
+  left: -40px;
+}
+.back-yellow {
+  background: #FBD000;
+}
+.back-yellow .img {
+  bottom: 150px;
+  right: -60px;
+}
+.back-yellowgreen {
+  background: #8CC919;
+}
+.back-yellowgreen .img {
+  bottom: 170px;
+  left: -30px;
+}
+.back-green {
+  background: #00B88E;
+}
+.back-green .img {
+  bottom: 180px;
+   left: 50px;
+}
+.nomal-event small {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+  line-height: 20px;
+  margin-top: 20px;
+}
+.event-space .a-link {
+  top: -100px;
+}
+
+
+/*access*/
+
+.access .flex{
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 45px;
+}
+.access-logo {
+  width: 25%;
+}
+.info-text {
+  text-align: left;
+  position: relative;
+  top: 15px;
+  left: 110px;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+.access-logo img {
+  width: 60%;
+}
+.map {
+  position: relative;
+  top: 40px;
+  left: 50px;
+  width: 30%;
+}
+iframe {
+  width: 90%;
+}
+
+
+/*footer*/
+footer {
+  background: #001155 url(../img/f-back.png) repeat-x 0 280px;
+  padding: 3% 3% 1%;
+}
+.footer {
+  justify-content: space-around;
+  margin-bottom: 150px;
+}
+.f-navi {
+  width: 70%;
+  margin-top: 20px;
+  justify-content: center;
+}
+.group {
+  width: 13%;
+  margin-right: 40px;
+}
+.group .title {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid white;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.menu li {
+  margin-bottom: 15px;
+}
+.menu li a:hover,
+.copy-right a:hover {
+  color: #CCFFFF;
+}
+.menu li::before{
+  content: "・";
+}
+.f-logo img {
+  width: 70%;
+}
+.f-logo p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin: 10px 0 0 10px;
+}
+.copy-right {
+  text-align: center;
+}
+.copy-right ul {
+  justify-content: center;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.copy-right li::before,
+.copy-right li:last-child::after {
+  content: "│";
+}
+
+
+/*penguin*/
+.shop h1::before,.shop h1::after,
+.news h1::before, .news h1::after,
+.special-event h1::before, .special-event h1::after,
+.nomal-event h1::before, .nomal-event h1::after,
+.access h1::before, .access h1::after {
+  content: "";
+  display: inline-block;
+  background: url(../img/pengin-blu.png) center center / contain no-repeat;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 20px;
+  position: relative;
+  top: 15px;
+  left: 0;
+}
+
+
+@media screen and (max-width: 1023px) {
+  .header-center {
+    left: 42%;
+  }
+  .g_nav a {
+    font-size: 0.9rem;
+  }
+  .main-logo {
+    width: 40%;
+    left: 28%;
+  }
+  .shop-open p {
+    font-size: 2rem;
+  }
+  .shop-open small {
+    font-size: 0.9rem;
+  }
+  .a-link {
+    left: 0;
+    margin-top: 40px;
+    display: inline-block;
+  }
+  .shop .text p {
+    width: 80%;
+    text-align: left;
+    letter-spacing: 2px;
+    line-height: 2rem;
+ }
+ .text {
+   padding: 30px 0 0 0px;
+   top: -1px;
+   height: 35%;
+  }
+  .kani-back-img {
+    height: 51%;
+  }
+  .text {
+    height: 50%;
+  }
+  .kurage-backimg {
+    height: 70vh;
+  }
+}
+
+
+
+@media screen and (max-width: 670px) {
+  .wrap {
+    padding: 30px 0;
+  }
+  .g_nav {
+    margin: 0 auto;
+  }
+  .g_nav_toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 30px 25px 11px 11px;
+    width: 40px;
+    height: 25px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .g_nav_toggle .bar {
+    height: 2px;
+    background: #383838;
+    transition: all 0.2s ease-out 0s;
+  }
+  .nav_op .g_nav_toggle .bar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .nav_op .g_nav_toggle .bar:first-child {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .nav_op .g_nav_toggle .bar:nth-child(2) {
+    transform: scale(0);
+  }
+  .nav_op .g_nav_toggle .bar:nth-child(3) {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  .g_nav_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 30%;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-100%);
+    background: #fff;
+    overflow: auto;
+    transition: all 0.2s ease-out 0s;
+    z-index: 2;
+    display: block;
+  }
+  .nav_op .g_nav_wrap {
+    transform: none;
+  }
+  .g_nav {
+    font-size: inherit;
+    display: block;
+    position: static !important;
+    padding: 0 !important;
+    margin-top: 2rem;
+    background: transparent;
+  }
+  .g_nav li a .name_wrap {
+    display: inline-block !important;
+  }
+  header {
+    height: 60px;
+    z-index: 5;
+  }
+  .header-center {
+    left: 0;
+    text-align: left;
+    width: 100%;
+    height: auto;
+  }
+  .header-center img {
+    max-height: 70px;
+  }
+  .header-left {
+    position: static;
+  }
+  .header-right {
+    margin: 110px 0 0;
+  }
+  .color1 a {
+    border-top: 1px solid #F8759D;
+    margin-bottom: 20px;
+  }
+  .color2 a {
+    border-top: 1px solid #FDA64A;
+    margin-bottom: 20px;
+  }
+  .color3 a {
+    border-top: 1px solid #FBD000;
+    margin-bottom: 20px;
+  }
+  .color4 a {
+    border-top: 1px solid #8CC919;
+    margin-bottom: 20px;
+  }
+  .kurage-main {
+    top: 85px;
+    z-index: 4;
+  }
+  .hitode-main {
+    display: none;
+  }
+  .kurage-main img {
+    width: 25%;
+    height: 28%;
+  }
+  .main-logo {
+    width: 50%;
+    top: -186px;
+    left: 23%;
+  }
+  .mainvisual img {
+    object-fit: cover;
+  }
+  .contact {
+    letter-spacing: 1px;
+    top: 90px;
+    width: 120px;
+    height: 120px;
+    z-index: 3;
+  }
+  .contact::before {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -65px;
+  }
+  .contact h2 {
+    font-size: 0.9rem;
+    top: 16px;
+    right: 10px;
+  }
+  .corona {
+    margin: 0;
+    padding: 15px 0;
+  }
+  .corona h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  .corona p {
+    line-height: 15px;
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .shop-open h1::before, .shop-open h1::after {
+    width: 3rem;
+    height: 3rem;
+  }
+  .shop-open p {
+    font-size: 1.3rem;
+    margin: 2rem auto 0 auto;
+  }
+  .shop-open .flex {
+    padding: 3%;
+    font-size: 0.6rem;
+    text-align: left;
+  }
+  .shop-open .flex small:first-child {
+    margin-right: 20px;
+    width: 25%;
+  }
+  .shop-open .flex small:last-child {
+    margin: 0;
+    width: auto;
+  }
+  .shop-open small {
+    font-size: 80%;
+  }
+  .ticket {
+    justify-content: space-around;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .ticket a, .ticket img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    margin: 0;
+  }
+  .kurage-backimg {
+    height: 70vh;
+  }
+  .animation {
+    display: none;
+  }
+  .text {
+    top: 0;
+    padding: 15px 0 0;
+    background: #33ccff;
+    height: 35vh;
+  }
+  .kani-back-img {
+    height: 35vh;
+    position: absolute;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+  }
+  .shop .text p {
+    width: 90%;
+    font-size: 0.9rem;
+    letter-spacing: 1.8px;
+    line-height: 1.6rem;
+    margin: 30px auto 10px auto;
+  }
+  .shop h1::before, .shop h1::after, .news h1::before, .news h1::after, .special-event h1::before, .special-event h1::after, .nomal-event h1::before, .nomal-event h1::after, .access h1::before, .access h1::after {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 10px;
+  }
+  .a-link {
+    font-size: 0.7rem;
+    position: static;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  .ticket-buy .a-link {
+    color: #33ccff;
+  }
+  .shop-img {
+    width: 100%;
+    height: 105%;
+    bottom: 305px;
+    background: url(../img/kani-blue-sp.png) no-repeat center / cover;
+  }
+  .shop-img img {
+    display: none;
+  }
+  .event-space .flex {
+    display: block;
+    margin: 40px 0;
+  }
+  .special-event .event-list,
+  .nomal-event .event-list {
+    padding: 0 3%;
+  }
+  .event-list .back-pink,
+  .event-list .back-yellowgreen {
+    margin: 0 5px 10px auto;
+  }
+  .event-list .back-orange,
+  .event-list .back-green{
+    margin: -30px auto 10px 5px;
+  }
+  .event-list .back-yellow {
+    margin: -30px 5px 10px auto;
+  }
+  .back-orange .img {
+    bottom: 10px;
+    left: -10px;
+  }
+  .back-yellow .img {
+    bottom: 160px;
+    right: -10px;
+  }
+  .back-yellowgreen .img {
+    bottom: 115px;
+    left: -60px;
+  }
+  .back-green .img {
+    bottom: 80px;
+    left: 55px;
+  }
+  .news .flex {
+    width: 90%;
+    margin: 30px auto 20px;
+  } 
+  .news dt {
+    width: 30%;
+    font-size: 0.8rem;
+  }
+  .news dd {
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+  .news small {
+    display: none;
+  }
+  .access .flex {
+   display: block;
+  }
+  .access-logo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .access-logo img {
+    width: 35%;
+  }
+  .info-text {
+    top: 20px;
+    left: 5px;
+    font-size: 0.85rem;
+    width: 60%;
+  }
+  .map {
+    top: 20px;
+    left: 0;
+    width: 100%;
+  }
+  iframe {
+    width: 90%;
+  }
+  footer {
+    background: #001155 url(../img/f-back.png) no-repeat bottom / 200%;
+  }
+  .footer {
+    margin-bottom: 85px;
+  }
+  .f-navi {
+    display: block;
+    order: 2;
+  }
+  .menu {
+    display: none;
+  }
+  .group {
+    width: 100%;
+    margin: 0;
+  }
+  .group .title {
+    font-size: 0.85rem;
+  }
+  .f-logo p {
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 1.4px;
+    width: 80%;
+  }
+  .copy-right {
+    font-size: 0.6rem;
+  }
+}

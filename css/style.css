@@ -7,6 +7,7 @@
 body {
   font-family: 'Noto Sans', sans-serif;
   color: white;
+  font-size: 100%;
 }
 li {
   list-style: none;
@@ -37,7 +38,7 @@ main {
   letter-spacing: 1.3px;
   position: relative;
   top: 0;
-  left: 350px;
+  left: 18%;
 }
 .a-link:hover {
   color: lightslategray;
@@ -65,6 +66,9 @@ header {
   z-index: 4;
   min-height: 80px;
 }
+  .sp {
+    display: none;
+}
 .g_nav_wrap {
   width: 800px;
   height: 100%;
@@ -82,22 +86,9 @@ header {
   display: block;
   letter-spacing: 1px;
 }
-.header-center {
-  position: relative;
-  top: 0;
-  left: 21%;
-  width: auto;
-}
 .header-center img {
   height: 85px;
   margin-top:10px;
-}
-.header-left {
-  position: relative;
-  right: 110px;
-}
-.header-right {
-  margin-left: 80px;
 }
 .color1 {
   background: url(../img/ticket.png) no-repeat center -5px / 75px;
@@ -197,45 +188,15 @@ header {
     transform: translate(0, 7px);
   }
 }
-@-webkit-keyframes fuwa {
-  0% {
-    transform: translate(0, 0);
-  }
-  35% {
-    transform: translate(0, -7px);
-  }
-  55% {
-    transform: translate(0, 0);
-  }
-  90% {
-    transform: translate(0, 7px);
-  }
-}
-@-moz-keyframes fuwa {
-  0% {
-    transform: translate(0, 0);
-  }
-  35% {
-    transform: translate(0, -7px);
-  }
-  55% {
-    transform: translate(0, 0);
-  }
-  90% {
-    transform: translate(0, 7px);
-  }
-}
 .kurage-main img,
 .hitode-main img {
   width: 50%;
-  height: 50%;
-  object-fit: cover;
   opacity: 1;
 }
 .main-logo {
-  position: relative;
+  position: absolute;
   width: 20%;
-  bottom: 260px;
+  bottom: 0;
   left: 39%;
 }
 .main-logo img {
@@ -267,6 +228,7 @@ header {
 /*営業時間*/
 .shop-open {
   color: #505050;
+  margin: 0 10rem;
 }
 .shop-open h1::before,
 .shop-open h1::after {
@@ -290,8 +252,10 @@ header {
   justify-content: center;
 }
 .shop-open .flex small {
-  margin-right: 20px;
   letter-spacing: 1.2px;
+}
+.shop-open small:last-child {
+  margin: 0 20px;
 }
 
 /*ticket*/
@@ -331,14 +295,15 @@ header {
 .news dt, .news dd {
   display: block;
   border-bottom: 5px dotted rgb(223, 223, 223,.7);
-  padding-bottom: 5px;
+  padding: 1rem 0.8rem 0.3rem ;
+  letter-spacing: 1.3px;
 }
 .news dt {
   width: 20%;
   text-align: center;
 }
 .news dd {
-  width: 70%;
+  width: 75%;
 }
 
 
@@ -363,31 +328,59 @@ header {
   object-fit: cover;
 }
 .shop .text p {
-  width: 50%;
   text-align: left;
   letter-spacing: 1.3px;
   line-height: 2rem;
+  width: 65%;
 }
 .text {
-  padding: 60px 0 0 20px;
+  padding: 2rem 5rem 0;
   background: #33ccff;
   position: relative;
   z-index: 1;
-  height: 25%;
+  height: 26%;
+  top: -1px;
 }
 .animation {
   position: absolute;
   bottom: 20px;
   left: 0;
   justify-content: space-between;
-  
+  height: 20%;
 }
-.animation img {
-  transform-origin:top;
+.anime-left, .anime-right {
+  position: relative;
+  width: 20%;
+  bottom: 0;
+  margin: 0 20px;
+}
+.wakame-1, .wakame-2 {
+  width: 20%;
+}
+.wakame-1 {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+}
+.wakame-3, .kani, .kai{
+  width: 18%;
+}
+.kai{
+  width: 30%;
+}
+.kani {
+  width: 45%;
+}
+.anime-right .wakame-3 {
+  position: absolute;
+  left: 4rem;
+}
+.wakame-1, .wakame-2, .kai {
+  transform-origin:bottom;
   animation:furiko ease-in-out 3s infinite alternate;
 }
-.animation img:last-child {
-  transform-origin:top;
+.wakame-3, .kani{
+  transform-origin:bottom;
   animation:furiko ease-in-out 3s infinite alternate-reverse;
 }
 
@@ -399,18 +392,10 @@ header {
     transform: rotate(-2deg);
   }
 }
-.animation img { 
-  width: 20%;
-}
-.animation img:first-child
+
 
 
 /*ebent*/
-.event-space {
-  margin: 0 auto;
-  padding-top: 160px;
-  min-width: 1000px;
-}
 .event-space .flex {
   justify-content: center;
   align-items: center;
@@ -423,7 +408,10 @@ header {
 }
 .event-space .flex a {
   display: inline-block;
-  height: 150px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 .special-event li h2 {
   margin-top: 80px;
@@ -434,55 +422,75 @@ header {
 .event-list .img {
   position: relative;
   z-index: -1;
+  transition: 1s;
 }
 .event-list .img img{
   width: 50%;
 }
 .event-space li {
+  position: relative;
+  z-index: 0;
   margin: 0 30px;
   width: 230px;
   height: 230px;
-  border-radius: 50%;
-  border: 2px solid white;
 }
-.back-pink {
+.back-pink a {
   background: #F8759D;
 }
-.back-pink a::before {
-  content: "";
-  background: url(../img/karei.png) no-repeat -40px 150px / 50% ;
+.event-list a:hover {
+  opacity: 0.9;
+}
+.back-pink:hover  .img {
+  bottom: 255px;
+  left: -100px;
 }
 .back-pink .img {
-  bottom: 150px;
+  bottom: 205px;
   left: -40px;
 }
-.back-orange {
+.back-orange a {
   background: #FDA64A;
 }
-.back-orange .img {
-  bottom: 50px;
-  left: -40px;
+.back-orange:hover .img {
+  bottom: 40px;
+  left: -80px;
 }
-.back-yellow {
+.back-orange .img {
+  bottom: 100px;
+  left: -30px;
+}
+.back-yellow a {
   background: #FBD000;
 }
-.back-yellow .img {
-  bottom: 150px;
-  right: -60px;
+.back-yellow:hover  .img {
+  bottom: 265px;
+  right: -110px;
 }
-.back-yellowgreen {
+.back-yellow .img {
+  bottom: 200px;
+  right: -50px;
+}
+.back-yellowgreen a {
   background: #8CC919;
+}
+.back-yellowgreen:hover .img {
+  bottom: 290px;
+  left: -95px;
 }
 .back-yellowgreen .img {
   bottom: 170px;
   left: -30px;
 }
-.back-green {
+.back-green a {
   background: #00B88E;
+}
+.back-green:hover .img {
+  bottom: 270px;
+  left: 100px;
 }
 .back-green .img {
   bottom: 180px;
-   left: 50px;
+  left: 50px;
 }
 .nomal-event small {
   width: 75%;
@@ -492,7 +500,7 @@ header {
   margin-top: 20px;
 }
 .event-space .a-link {
-  top: -100px;
+  top: -3rem;
 }
 
 
@@ -504,13 +512,14 @@ header {
   margin: 30px auto 45px;
 }
 .access-logo {
-  width: 25%;
+  width: 30%;
+  margin-right: 5rem;
 }
 .info-text {
   text-align: left;
   position: relative;
-  top: 15px;
-  left: 110px;
+  top: 0;
+  left: 25%;
   font-size: 1.3rem;
   letter-spacing: 1px;
 }
@@ -519,8 +528,8 @@ header {
 }
 .map {
   position: relative;
-  top: 40px;
-  left: 50px;
+  top: 1rem;
+  left: 0;
   width: 30%;
 }
 iframe {
@@ -532,35 +541,40 @@ iframe {
 footer {
   background: #001155 url(../img/f-back.png) repeat-x 0 280px;
   padding: 3% 3% 1%;
+  position: relative;
 }
 .footer {
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 150px;
 }
 .f-navi {
-  width: 70%;
+  width: 75%;
   margin-top: 20px;
-  justify-content: center;
+  justify-content: space-around;
+}
+.f-logo {
+  width: 25%;
 }
 .group {
-  width: 13%;
-  margin-right: 40px;
+  width: 15%;
+  margin-right: 2rem;
 }
 .group .title {
   padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: 1px solid white;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
-.menu li {
+.drop-list {
   margin-bottom: 15px;
+  font-size: 0.9rem;
 }
-.menu li a:hover,
+.drop-list a:hover,
 .copy-right a:hover {
   color: #CCFFFF;
 }
-.menu li::before{
+.drop-list::before{
   content: "・";
 }
 .f-logo img {
@@ -614,8 +628,19 @@ footer {
     width: 40%;
     left: 28%;
   }
+  .kurage-main,
+  .hitode-main {
+    width: 30%;
+  }
+  .shop-open {
+    padding: 3rem 1rem;
+    margin: 0 3rem;
+  }
   .shop-open p {
     font-size: 2rem;
+  }
+  .shop-open .flex {
+    text-align: left;
   }
   .shop-open small {
     font-size: 0.9rem;
@@ -632,7 +657,7 @@ footer {
     line-height: 2rem;
  }
  .text {
-   padding: 30px 0 0 0px;
+   padding: 1rem 3rem 0;
    top: -1px;
    height: 35%;
   }
@@ -643,15 +668,101 @@ footer {
     height: 50%;
   }
   .kurage-backimg {
-    height: 70vh;
+    height: 75vh;
+  }
+  .event-space li {
+    margin: 0 10px;
+  }
+  .back-pink .img {
+    left: -95px;
+    bottom: 220px;
+    animation: fuwa ease-in-out 3s infinite both;
+  }
+  .back-orange .img {
+    bottom: 45px;
+    left: -70px;
+    animation: fuwa linear 5s infinite both;
+  }
+  .back-yellow .img {
+    bottom: 285px;
+    right: -60px;
+    animation: fuwa ease-in-out 3s infinite both;
+  }
+  .back-yellowgreen .img {
+    bottom: 235px;
+    left: -120px;
+    animation: fuwa linear 5s infinite both;
+  }
+  .back-green .img {
+    bottom: 105px;
+    left: 150px;
+    animation: fuwa ease-in-out 3s infinite both;
+  }
+  .news .flex {
+    width: 90%;
+  }
+  .news dt {
+    font-size: 0.9rem;
+    width: 25%;
+  }
+  .news dd {
+    font-size: 1rem;
+    width: 70%;
+  }
+  .news small {
+    display: none;
+  }
+  .access-logo {
+    width: 40%;
+    margin-right: 3rem;
+  }
+  .info-text {
+    left: 5%;
+  }
+  .access-logo img {
+    width: 100%;
+  }
+  .map {
+    top: 0.5rem;
+    width: 40%;
+  }
+  .group {
+    width: 20%;
+    margin-right: 1rem;
+  }
+  .group .title {
+    font-size: 0.8rem;
+  }
+  .drop-list {
+    margin-bottom: 15px;
+    font-size: 0.72rem;
+  }
+  .f-logo p {
+    font-size: 1rem;
+    margin-left: 0;
+  }
+  .copy-right {
+    font-size: 0.9rem;
+  }
+  .contact h2 {
+    font-size: 1rem;
+    top: 20px;
+    right: 10px;
+  }
+  .contact::before {
+    width: 140px;
+    height: 140px;
   }
 }
 
 
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 767px) {
   .wrap {
     padding: 30px 0;
+  }
+  .sp {
+    display: block;
   }
   .g_nav {
     margin: 0 auto;
@@ -729,6 +840,9 @@ footer {
     width: 100%;
     height: auto;
   }
+  .pc_tab {
+    display: none;
+  }
   .header-center img {
     max-height: 70px;
   }
@@ -755,19 +869,15 @@ footer {
     margin-bottom: 20px;
   }
   .kurage-main {
+    width: 50%;
     top: 85px;
     z-index: 4;
   }
   .hitode-main {
     display: none;
   }
-  .kurage-main img {
-    width: 25%;
-    height: 28%;
-  }
   .main-logo {
     width: 50%;
-    top: -186px;
     left: 23%;
   }
   .mainvisual img {
@@ -781,16 +891,16 @@ footer {
     z-index: 3;
   }
   .contact::before {
-    width: 120px;
-    height: 120px;
+    width: 115px;
+    height: 105px;
     border-radius: 50%;
     position: absolute;
     top: 0;
     right: -65px;
   }
   .contact h2 {
-    font-size: 0.9rem;
-    top: 16px;
+    font-size: 0.75rem;
+    top: 14px;
     right: 10px;
   }
   .corona {
@@ -812,6 +922,9 @@ footer {
     width: 3rem;
     height: 3rem;
   }
+  .shop-open {
+    margin: 0 1rem;
+  }
   .shop-open p {
     font-size: 1.3rem;
     margin: 2rem auto 0 auto;
@@ -822,12 +935,10 @@ footer {
     text-align: left;
   }
   .shop-open .flex small:first-child {
-    margin-right: 20px;
-    width: 25%;
+    width: auto;
   }
   .shop-open .flex small:last-child {
-    margin: 0;
-    width: auto;
+    width: 70%;
   }
   .shop-open small {
     font-size: 80%;
@@ -848,6 +959,9 @@ footer {
   }
   .animation {
     display: none;
+  }
+  .shop {
+    height: 75vh;
   }
   .text {
     top: 0;
@@ -912,21 +1026,29 @@ footer {
   .event-list .back-yellow {
     margin: -30px 5px 10px auto;
   }
+  .back-pink .img {
+    left: -125px;
+    animation: fuwa ease-in-out 3s infinite both;
+  }
   .back-orange .img {
-    bottom: 10px;
-    left: -10px;
+    bottom: 45px;
+    left: -70px;
+    animation: fuwa linear 5s infinite both;
   }
   .back-yellow .img {
-    bottom: 160px;
-    right: -10px;
+    bottom: 285px;
+    right: -60px;
+    animation: fuwa ease-in-out 3s infinite both;
   }
   .back-yellowgreen .img {
-    bottom: 115px;
-    left: -60px;
+    bottom: 235px;
+    left: -120px;
+    animation: fuwa linear 5s infinite both;
   }
   .back-green .img {
-    bottom: 80px;
-    left: 55px;
+    bottom: 105px;
+    left: 150px;
+    animation: fuwa ease-in-out 3s infinite both;
   }
   .news .flex {
     width: 90%;
@@ -937,7 +1059,7 @@ footer {
     font-size: 0.8rem;
   }
   .news dd {
-    font-size: 1rem;
+    font-size: 0.85rem;
     padding-left: 10px;
   }
   .news small {
@@ -972,29 +1094,179 @@ footer {
     background: #001155 url(../img/f-back.png) no-repeat bottom / 200%;
   }
   .footer {
-    margin-bottom: 85px;
+    margin: 1rem 0 65px;
   }
   .f-navi {
     display: block;
+    width: 45%;
     order: 2;
+    margin-top: 10px;
+  }
+  .title {
+    font-size: 0.85rem;
   }
   .menu {
     display: none;
+    width: 100%;
+    position: absolute;
+    top: 26px;
+    z-index: 2;
+    background: #001155;
+  }
+  
+  .title.open +.menu {
+    display: block;
+  }
+  .drop-list {
+    background: gray;
+    height: 40px;
+    margin: 0;
+    padding-top: 10px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid white;
+  }
+  .drop-list::before{
+    content: "";
   }
   .group {
     width: 100%;
     margin: 0;
+    position: relative;
   }
-  .group .title {
-    font-size: 0.85rem;
+  .f-logo {
+    width: 55%;
   }
   .f-logo p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 20px;
     letter-spacing: 1.4px;
     width: 80%;
+    margin: 0.5rem 0 0 0.3rem;
   }
   .copy-right {
     font-size: 0.6rem;
   }
+}
+
+
+/*リンクの形状*/
+#page-top a{
+  display: flex;
+  width: 90px;
+  transition:all 0.3s;
+}
+#page-top img {
+  width: 100%;
+}
+
+
+/*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  right: 5px;
+  bottom:150px;
+  z-index: 2;
+    /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+/*　左の動き　*/
+
+#page-top.UpMove{
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+  transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+  transform: translateX(0);
+  }
+}
+/*　右の動き　*/
+
+#page-top.DownMove{
+  animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+    opacity: 1;
+  transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+  transform: translateX(100px);
+  }
+}
+
+@media  screen and (max-width: 1023px) {
+  #page-top {
+    right: 5px;
+    bottom: 105px;
+  }
+  #page-top a {
+    width: 95px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #page-top {
+    right: 5px;
+    bottom: 35px;
+  }
+  #page-top a {
+    width: 70px;
+  }
+}
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+position: fixed;
+width: 100%;
+height: 100%;
+z-index: 999;
+background: #CCFFFF;
+text-align:center;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+width:260px;
+}
+
+/* fadeUpをするアイコンの動き */
+
+.fadeUp{
+animation-name: fadeUpAnime;
+animation-duration:0.8s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+from {
+  opacity: 0;
+transform: translateY(100px);
+}
+
+to {
+  opacity: 1;
+transform: translateY(0);
+}
+}
+
+.slide {
+height: 100vh;
 }

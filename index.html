@@ -14,28 +14,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-</head>
+  </head>
 
 
 <body>
 
+  <div id="splash">
+    <div id="splash_logo">
+      <img src="img/kani.png" alt="kani" class="fadeUp">
+    </div>
+  </div>
+  
+
   <header>
-    <a href="index.html" class="header-center">
+    <a href="index.html" class="header-center  sp">
       <img src="img/header-logo.png" alt="logo">
     </a>
 
     <nav class="g_nav_wrap">
       <div class="header-left">
         <ul class="flex g_nav">
-          <li class="color1"><a href="">チケット</a></li>
-          <li class="color2"><a href="">新着情報</a></li>
+          <li class="color1"><a href="#">チケット</a></li>
+          <li class="color2"><a href="#">新着情報</a></li>
         </ul>
       </div>
 
+      <a href="index.html" class="header-center pc_tab">
+        <img src="img/header-logo.png" alt="logo">
+      </a>
+
       <div class="header-right">
         <ul class="flex g_nav">
-          <li class="color3"><a href="">フロアマップ</a></li>
-          <li  class="color4"><a href="">アクセス</a></li>
+          <li class="color3"><a href="#">フロアマップ</a></li>
+          <li class="color4"><a href="#">アクセス</a></li>
         </ul>
       </div>
     </nav>
@@ -57,7 +68,7 @@
       </div>
 
       <div class="contact">
-        <a href=""><h2>お問い合わせ</h2></a>
+        <a href="#"><h2>お問い合わせ</h2></a>
       </div>
 
       <div class="kurage-main">
@@ -73,7 +84,7 @@
     <div class="corona wrap">
       <p>当館における</p>
       <h2>新型コロナウイルス感染症対策</h2>
-      <p>については<a href="">こちら</a></p>
+      <p>については<a href="#">こちら</a></p>
     </div>
 
     <!--営業時間-->
@@ -91,12 +102,12 @@
     <!--ticket-->
     <section class="ticket-buy wrap">
       <div class="flex ticket">
-        <a href=""><img src="img/manbou-l.png" alt="ticket"></a>
+        <a href="#"><img src="img/manbou-l.png" alt="ticket"></a>
         
-        <a href=""><img src="img/manbou-r.png" alt="ticket"></a>
+        <a href="#"><img src="img/manbou-r.png" alt="ticket"></a>
       </div>
 
-      <a href="" class="a-link">
+      <a href="#" class="a-link">
         全てのチケット情報を見る
       </a>
     </section>
@@ -109,7 +120,7 @@
         <h1>当館について</h1>
         <p>当館の入館口は2Fですが、B1F～4Fまで充実しておりたくさんの生きものたちに出会うことができます。アクアシアターや展示会、ふれあい広場などを設けているのでご来館頂いた一日が楽しい思い出であふれます！</p>
 
-        <a href="" class="a-link">
+        <a href="#" class="a-link">
           全てのチケット情報を見る
         </a>
       </div>
@@ -118,9 +129,19 @@
         <img src="img/kani-blue-pc.png" alt="kani" class="kani-img">
 
         <div class="animation flex">
-          <img src="img/anime-l.png" alt="貝とわかめ">
+          <div class="anime-left">
+            <img src="img/wakame-04.png" alt="わかめ" class="wakame-1">
+            <img src="img/kai.png" alt="kai" class="kai">
+            <img src="img/wakame-04.png" alt="わかめ" class="wakame-2">
+            <img src="img/wakame-04.png" alt="わかめ" class="wakame-3">
+          </div>
 
-          <img src="img/anime-r.png" alt="カニとわかめ">
+          <div class="anime-right">
+            <img src="img/wakame-04.png" alt="わかめ" class="wakame-1">
+            <img src="img/wakame-04.png" alt="わかめ" class="wakame-3">
+            <img src="img/kani.png" alt="かに" class="kani">
+            <img src="img/wakame-04.png" alt="わかめ" class="wakame-2">
+          </div>
         </div>
       </div>
 
@@ -138,7 +159,7 @@
           <div class="event-list">
             <ul class="flex">
               <li class="back-pink">
-                <a href="">
+                <a href="#">
                   <h2>ミラクルうんち<br>ワールド！</h2>
                 </a>
                 <div class="img">
@@ -146,7 +167,7 @@
                 </div>
               </li>
               <li class="back-orange">
-                <a href="">
+                <a href="#">
                   <h2>ゴールデンウィーク<br>夜の水族館</h2>
                 </a>
                 <div class="img">
@@ -154,7 +175,7 @@
                 </div>
               </li>
               <li class="back-yellow">
-                <a href="">
+                <a href="#">
                   <h2>もうすぐひなまつり！<br>展示会</h2>
                 </a>
                 <div class="img">
@@ -170,7 +191,7 @@
           <div class="event-list">
             <ul class="flex">
               <li class="back-yellowgreen">
-                <a href="">
+                <a href="#">
                   <h2>アクアシアター</h2>
                   <small>イルカとアシカの<br>共演ステージ</small>
                 </a>
@@ -179,7 +200,7 @@
                 </div>
               </li>
               <li class="back-green">
-                <a href="">
+                <a href="#">
                   <h2>ペンギン大編隊</h2>
                   <small>飛べない鳥と飛ぶ鳥の生活や体の秘密</small>
                 </a>
@@ -192,7 +213,7 @@
         </div>
         
 
-        <a href="" class="a-link">
+        <a href="#" class="a-link">
           イベント一覧を見る
         </a>
       </div>
@@ -204,29 +225,29 @@
         <h1>お知らせ</h1>
 
         <dl class="flex">
-          <a href="">
+          <a href="#">
             <dt>2022年07月07日</dt>
             <dd>－ご利用のお客様へお知らせ－ <small>※ご来館前にご確認ください</small></dd>
           </a>
-          <a href="">
+          <a href="#">
             <dt>2022年07月01日</dt>
             <dd>「海の日」中学生以下入館料無料のお知らせ</dd>
           </a>
-          <a href="">
+          <a href="#">
             <dt>2022年07月01日</dt>
             <dd>「下関市立しものせき水族館設備管理業務」<small>に係る条件付き一般競争入札の実施について</small></dd>
           </a>
-          <a href="">
+          <a href="#">
             <dt>2022年06月30日</dt>
             <dd>マカロニペンギンのヒナが死亡しました。</dd>
           </a>
-          <a href="">
+          <a href="#">
             <dt>2022年06月29日</dt>
             <dd>みんなの思い出大募集！「海響あーとコンテスト」</dd>
           </a>
         </dl>
 
-        <a href="" class="a-link">
+        <a href="#" class="a-link">
           お知らせ一覧を見る
         </a>
       </div>
@@ -256,91 +277,85 @@
 
 
   <footer>
-    <div class="footer flex">
-      <div class="f-navi flex">
-        <div class="group">
-          <h2 class="title">チケット</h2>
-          <ul class="menu">
-           <li><a href="">入館料</a></li>
-           <li><a href="">年間パスポート</a></li>
-           <li><a href="">割引チケット</a></li>
-           <li><a href="">団体様</a></li>
-         </ul>
-        </div>
+      <div id="page-top"><a href="index.html"><img src="img/pagetop.png" alt="pagetop"></a></div> 
+
+      <div class="footer flex">
+        <div class="f-navi flex">
+         <div class="group">
+           <h2 class="title">チケット</h2>
+            <ul class="menu">
+             <li class="drop-list"><a href="#">入館料</a></li>
+             <li class="drop-list"><a href="#">年間パスポート</a></li>
+             <li class="drop-list"><a href="#">割引チケット</a></li>
+             <li class="drop-list"><a href="#">団体様</a></li>
+           </ul>
+         </div>
         
 
-        <div class="group">
-          <h2 class="title">新着情報</h2>
-          <ul class="menu">
-           <li><a href="">お知らせ</a></li>
-           <li><a href="">通常イベント</a></li>
-           <li><a href="">特別イベント</a></li>
-         </ul>
+         <div class="group">
+            <h2 class="title">新着情報</h2>
+            <ul class="menu">
+             <li class="drop-list"><a href="#">お知らせ</a></li>
+             <li class="drop-list"><a href="#">通常イベント</a></li>
+             <li class="drop-list"><a href="#">特別イベント</a></li>
+           </ul>
+         </div>
+
+
+         <div class="group">
+           <h2 class="title">フロアマップ</h2>
+            <ul class="menu">
+             <li class="drop-list"><a href="#">B１F</a></li>
+             <li class="drop-list"><a href="#">１F</a></li>
+             <li class="drop-list"><a href="#">２F</a></li>
+             <li class="drop-list"><a href="#">３F</a></li>
+             <li class="drop-list"><a href="#">４F</a></li>
+           </ul>
+         </div> 
+
+
+          <div class="group">
+            <h2 class="title">アクセス</h2>
+            <ul class="menu">
+             <li class="drop-list"><a href="#">アクセス</a></li>
+          </ul>
+          </div> 
+
+
+          <div class="group">
+            <h2 class="title">お問い合わせ</h2>
+            <ul class="menu">
+              <li class="drop-list"><a href="#">お問い合わせ</a></li>
+          </ul>
+          </div> 
         </div>
 
 
-        <div class="group">
-          <h2 class="title">フロアマップ</h2>
-          <ul class="menu">
-           <li><a href="">B１F</a></li>
-           <li><a href="">１F</a></li>
-           <li><a href="">２F</a></li>
-           <li><a href="">３F</a></li>
-           <li><a href="">４F</a></li>
-         </ul>
-        </div> 
+        <div class="f-logo">
+          <img src="img/logo-white.png" alt="logo">
 
-
-        <div class="group">
-          <h2 class="title">アクセス</h2>
-          <ul class="menu">
-           <li><a href="">アクセス</a></li>
-         </ul>
-        </div> 
-
-
-        <div class="group">
-          <h2 class="title">お問い合わせ</h2>
-          <ul class="menu">
-           <li><a href="">お問い合わせ</a></li>
-         </ul>
-        </div> 
+          <p>〒750-0036<br>山口県下関市あるかぽーと6番1号<br>TEL: 083-228-1100</p>
+        </div>
       </div>
 
+      <div class="copy-right">
+        <ul class="flex">
+          <li><a href="#">会社情報</a></li>
+          <li><a href="#">動物取扱業に関する表示</a></li>
+          <li><a href="#">プライバシーポリシー</a></li> 
+        </ul>
 
-      <div class="f-logo">
-        <img src="img/logo-white.png" alt="logo">
-
-        <p>〒750-0036<br>山口県下関市あるかぽーと6番1号<br>TEL: 083-228-1100</p>
+        <p>&copy;海響館.All Rights Reserved.</p>
       </div>
-    </div>
-
-    <div class="copy-right">
-      <ul class="flex">
-        <li><a href="">会社情報</a></li>
-        <li><a href="">動物取扱業に関する表示</a></li>
-        <li><a href="">プライバシーポリシー</a></li> 
-      </ul>
-
-      <p>&copy;海響館.All Rights Reserved.</p>
-    </div>
   </footer>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js"></script>
    
   <!--  スライド を使う場合  -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script>
-      $(document).ready(function(){
-          $('.slide').slick({
-              dots: true,
-              autoplay: true,
-              autoplaySpeed: 1000,
-              infinite: true
-          });
-      });
-  </script>
+
   
   <!--  その他js  -->
 <script>
@@ -399,4 +414,27 @@
   });
 </script>
 
+<script>
+  //* スクロール
+
+  $(function () {
+    var _height = window.innerHeight;
+    var b_height = $('body').height();
+
+    $(window).on('scroll',function () {
+      if ($(window).scrollTop() < _height *0.5) {
+        $('body').removeClass('scrolled');
+      } else {
+        $('body').addClass('scrolled');
+      }
+      if ($(window).scrollTop() > b_height - (_height * 1.5)) {
+        $('body').addClass('scroll_end');
+      } else {
+        $('body').removeClass('scroll_end');
+      }
+    });
+  });	
+</script>
+
 </body>
+</html>

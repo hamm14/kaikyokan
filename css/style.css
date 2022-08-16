@@ -506,10 +506,36 @@ header {
 
 /*access*/
 
+.access {
+  position: relative;
+  padding: 0;
+  height: 65vh;
+  margin-top: 8rem;
+  background: #33ccff;
+}
+#wrapper{
+  width:100%;
+  height: 200px;
+  overflow: hidden;
+  position: absolute;
+  top: -100px;
+  left: 0;
+}
+
+.wave-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 3rem 0;
+}
 .access .flex{
+  position: relative;
+  padding: 0;
   justify-content: center;
   align-items: center;
-  margin: 30px auto 45px;
+  margin: 2rem auto;
 }
 .access-logo {
   width: 30%;
@@ -712,6 +738,9 @@ footer {
   .news small {
     display: none;
   }
+  .access {
+    height: 65vh;
+  }
   .access-logo {
     width: 40%;
     margin-right: 3rem;
@@ -724,7 +753,7 @@ footer {
   }
   .map {
     top: 0.5rem;
-    width: 40%;
+    width: 50%;
   }
   .group {
     width: 20%;
@@ -1088,7 +1117,7 @@ footer {
     width: 100%;
   }
   iframe {
-    width: 90%;
+    height: 180px;
   }
   footer {
     background: #001155 url(../img/f-back.png) no-repeat bottom / 200%;
@@ -1106,24 +1135,30 @@ footer {
     font-size: 0.85rem;
   }
   .menu {
-    display: none;
-    width: 100%;
-    position: absolute;
-    top: 26px;
-    z-index: 2;
     background: #001155;
+    max-height: 0;
+	  overflow: hidden;
+	  transition: 0.7s;
+    position: absolute;
+    top: 25px;
+    z-index: 1;
+    width: 100%;
   }
   
-  .title.open +.menu {
-    display: block;
+  .title.open + .menu {
+    max-height: 20rem;
+    position: absolute;
+    top: 26px;
+    z-index: 1;
+    width: 100%;
   }
   .drop-list {
-    background: gray;
-    height: 40px;
+    background: #2c7cff;
+    height: 35px;
     margin: 0;
     padding-top: 10px;
-    font-size: 0.9rem;
-    border-bottom: 1px solid white;
+    font-size: 0.7rem;
+    border-bottom: 1px solid #fff;
   }
   .drop-list::before{
     content: "";

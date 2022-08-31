@@ -1144,6 +1144,23 @@ footer {
     z-index: 1;
     width: 100%;
   }
+  .title::before, .title::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: #fff;
+  top: 7px;
+  right: 5px;
+  width: 14px;
+  height: 2px;
+  }
+  .title::after {
+    transform: rotate(-90deg);
+    transition: transform 0.7s;
+  }
+  .title.open::after {
+    transform: rotate(0deg);
+  }
   
   .title.open + .menu {
     max-height: 20rem;
